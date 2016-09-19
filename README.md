@@ -4,3 +4,8 @@ This project is broken into three parts
 - A sequencial version of matrix multiplication
 - A pthreaded version of matrix multiplication
 - An openmp version of matrix multiplication
+
+Group members:
+Trent Steen
+Mike Shlanta
+Tyler Rau
