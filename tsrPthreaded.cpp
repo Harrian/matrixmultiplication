@@ -74,7 +74,7 @@ void printTwoDArray(int ** a, int b, int c){
 	return;
 }
 int main(int argc, char * argv[]){
-	if(argc!=4){
+	if(argc!=5){
 		printf("Error\nUsage: a.out PRINTFLAG SIZE MOD NUMOFTHREADS\nPrint Flag should be 0 for off or any other number for on\n");
 		exit(1);
 	}
@@ -82,7 +82,7 @@ int main(int argc, char * argv[]){
 int printFlag=atoi(argv[1]);
 int size=atoi(argv[2]);
 int mod=atoi(argv[3]);
-int NUM_THREADS=atoi(argv[5]);
+int NUM_THREADS=atoi(argv[4]);
 int ** ar1=createTwoDArray(size,size,mod);
 int ** ar2=createTwoDArray(size,size,mod);
 int ** results = createTwoDArray(size,size,0);
