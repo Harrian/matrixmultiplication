@@ -23,7 +23,6 @@ void printTwoDArray(int ** a, int b, int c){
 	return;
 }
 int main(int argc, char * argv[]){
-	
 	if(argc!=5){
 		printf("Error\nUsage: \% ./a.out PRINTFLAG SIZE MOD NUMOFTHREADS\nPrint Flag should be 0 for off or any other number for on\n");
 		exit(1);
