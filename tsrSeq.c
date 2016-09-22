@@ -23,19 +23,22 @@ void printTwoDArray(int ** a, int b, int c){
 	return;
 }
 int main(int argc, char * argv[]){
-	if(argc!=3){
-		printf("Error\nUsage: \% ./a.out SIZE MOD\n");
+	if(argc!=4){
+		printf("Error\nUsage: \% ./a.out PRINTFLAG SIZE MOD\nPrint Flag should be 0 for off or any other number for on\n");
 		exit(1);
 	}
-int size=atoi(argv[1]);
-int mod=atoi(argv[2]);
+int printFlag=atoi(argv[1]);
+int size=atoi(argv[2]);
+int mod=atoi(argv[3]);
 int ** ar1=createTwoDArray(size,size,mod);
 int ** ar2=createTwoDArray(size,size,mod);
 int ** results = createTwoDArray(size,size,0);
-printf("%d\n",size);
-printTwoDArray(ar1,size,size);
-printf("\n");
-printTwoDArray(ar2,size,size);
+if(printFlag){
+	printf("%d\n",size);
+	printTwoDArray(ar1,size,size);
+	printf("\n");
+	printTwoDArray(ar2,size,size);
+}
 int i,j,k;
 for(i=0;i<size;i++){
 	for(j=0;j<size;j++){
@@ -48,6 +51,8 @@ for(i=0;i<size;i++){
 // printf("Here: %d %d %d\n",ar1[0][0]*ar2[0][1],
 						  // ar1[0][1]*ar2[1][1],
 						  // ar1[0][2]*ar2[2][1]);
-printTwoDArray(results,size,size);
+
+if(printFlag)
+	printTwoDArray(results,size,size);
 return 0;	
 }
