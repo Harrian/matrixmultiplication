@@ -23,6 +23,10 @@ void printTwoDArray(int ** a, int b, int c){
 	return;
 }
 int main(int argc, char * argv[]){
+	if(argc!=3){
+		printf("Error\nUsage: \% ./a.out SIZE MOD\n");
+		exit(1);
+	}
 int size=atoi(argv[1]);
 int mod=atoi(argv[2]);
 int ** ar1=createTwoDArray(size,size,mod);
