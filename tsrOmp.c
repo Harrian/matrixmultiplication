@@ -27,7 +27,7 @@ int main(int argc, char * argv[]){
 		printf("Error\nUsage: \% ./a.out PRINTFLAG SIZE MOD NUMOFTHREADS\nPrint Flag should be 0 for off or any other number for on\n");
 		exit(1);
 	}
-  omp_set_num_threads(atoi(4));
+  omp_set_num_threads(atoi(argv[4]));
 int printFlag=atoi(argv[1]);
 int size=atoi(argv[2]);
 int mod=atoi(argv[3]);
