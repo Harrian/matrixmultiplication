@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <time.h>
+#include <stdlib.h>
 #define A 3
 #define B A
 #define C B
@@ -53,6 +54,6 @@ int main(int argc, char const *argv[]) {
 		}
 		printf("\n");
 	}
-	
+
 	return 0;
 }
